@@ -1,0 +1,8 @@
+LocalOnly = true
+CertFile = 'path/to/fullchain.pem'
+KeyFile = 'path/to/privkey.pem'
+OCSPCache = '/tmp/amppkg-ocsp'
+
+[[URLSet]]
+  [URLSet.Sign]
+    Domain = "adball.tech"
