@@ -114,24 +114,34 @@
 </head>
 <body>
   
+   <amp-auto-ads type="adsense" data-ad-client="ca-pub-6607653375286321"></amp-auto-ads>
+  
+   <h1 on="tap:exit-api.exit(target='landingPage')">Baking Supplies</h1>
  
-   <amp-auto-ads type="adsense" data-ad-client="ca-pub-5439573510495356"></amp-auto-ads>
-   <amp-img src="mountains.jpg" layout="responsive" width="266" height="150"></amp-img> 
+  
+  <amp-img src="           " layout="responsive" width="266" height="150"></amp-img> 
   
   
   
   <div class="amp-ad-container" amp-access="NOT scroll.scroll">
     
-  <amp-ad... >
-
+  
+   <amp-ad
+     layout="fixed"
+     width="300"
+     height="300"
+     type="adsense"
+     data-ad-client="ca-pub-6607653375286321"
+     data-ad-slot="6766695733">
+   </amp-ad>
     
     </div>
     
-  <amp-analytics config="http://example.com/config.json">
+  <amp-analytics config="http://adball.tech/config.json">
   <script type="application/json">
     {
       "requests": {
-        "pageview": "https://example.com/analytics?url=${canonicalUrl}&title=${title}&acct=${account}&clientId=${clientId(cid-scope)}",
+        "pageview": "https://adball.tech/analytics?url=${canonicalUrl}&title=${title}&acct=${account}&clientId=${clientId(cid-scope)}",
       },
       "vars": {
         "account": "ABC123",
@@ -142,7 +152,7 @@
           "on": "visible",
           "request": "pageview",
           "vars": {
-            "title": "My homepage",
+            "title": "My News",
             "clientId": "my user"
           }
       }
@@ -153,7 +163,7 @@
     
 <amp-install-serviceworker
   layout="nodisplay"
-  src="https://www.your-domain.com/serviceworker.js"
+  src="https://www.adball.tech/serviceworker.js"
   data-no-service-worker-fallback-url-match=".*\.amp\.html"
   data-no-service-worker-fallback-shell-url="https://pub.com/shell"
 >
@@ -167,87 +177,28 @@
             sandbox="allow-scripts allow-same-origin allow-popups"
             allowfullscreen
             frameborder="0"
-            src="/static/samples/files/amp-url-api.html">
-            <amp-img src="/static/samples/img/amp-url-api-placeholder.png"
+            src="/static/files/api.html">
+      
+            <amp-img src="/placeholder.png"
              layout="fixed-height"
              height="645"
              placeholder>
              </amp-img>
     </amp-iframe>
+  
+  
+  
+  
+  
    
   <amp-install-serviceworker
-      src="https://www.your-domain.com/serviceworker.js"
+      src="https://www.adball.tech/serviceworker.js"
       layout="nodisplay">
 </amp-install-serviceworker>
     
-<amp-ad-exit id="exit-api">
-  <script type="application/json">
-    {
-      "targets": {
-        "landingPage": {
-          "finalUrl": "https://example.com/artisan-baking/?from=_clickArea",
-          "vars": {
-            "_clickArea": {
-              "defaultValue": "headline"
-            }
-          }
-        },
-        "flour": {
-          "finalUrl": "https://adclickserver.example.com/click?id=af319adec901&x=CLICK_X&y=CLICK_Y&adurl=https://example.com/artisan-baking/flour",
-          "filters": ["3sClick", "borderProtection"],
-          "behaviors": {
-            "clickTarget": "_top"
-          }
-        },
-        "bannetons": {
-          "finalUrl": "https://example.com/artisan-baking/bannetons",
-          "trackingUrls": [
-            "https://adclickserver.example.com/click?id=af319adec901&x=CLICK_X&y=CLICK_Y",
-            "https://tracker.adnetwork.example.com/?url=example.com"
-          ],
-          "filters": ["3sClick", "borderProtection"]
-        }
-      },
-      "filters": {
-        "3sClick": {
-          "type": "clickDelay",
-          "delay": 3000
-        },
-        "borderProtection": {
-          "type": "clickLocation",
-          "top": 10,
-          "right": 10,
-          "bottom": 10,
-          "left": 10
-        }
-      }
-    }
-  </script>
-</amp-ad-exit>
 
-<h1 on="tap:exit-api.exit(target='landingPage')">Artisan Baking Supplies</h1>
-<div id="product0" on="tap:exit-api.exit(target='flour')">
-  <p>Rye flour</p>
-  <amp-img src="..." width="..." height="..."></amp-img>
-</div>
-<div id="product1" on="tap:exit-api.exit(target='bannetons')">
-  <p>Bannetons</p>
-  <amp-img src="..." width="..." height="..."></amp-img>
-</div>
-<div
-  id="footer"
-  on="tap:exit-api.exit(target='landingPage', _clickArea='footer')"
->
-  example.com/artisan-baking
-</div>
     
     
-    
-  <amp-iframely width="400" height="225"
-    data-id="I8NNa1s"
-    layout="responsive"
-    data-img>
-</amp-iframely>
   
  
   
