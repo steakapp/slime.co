@@ -1,154 +1,86 @@
-<!DOCTYPE html>
-<html amp lang="en">
+<!doctype html>
+<html ⚡ lang="en">
 <head>
-  <meta charset="UTF-8">
-  
-  <meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
   <link rel="canonical" href="/index.html">
-  
-  <script async  src="https://cdn.ampproject.org/v0.js"></script>
-  
-  <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
-  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-  <script async custom-element="amp-vimeo" src="https://cdn.ampproject.org/v0/amp-vimeo-0.1.js"></script>
-  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
-  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
-  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-  <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
-  <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
-  
-  <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
-  <script async custom-element="amp-access-scroll" src="https://cdn.ampproject.org/v0/amp-access-scroll-0.1.js"></script>
-  <script async custom-element="amp-ad-exit" src="https://cdn.ampproject.org/v0/amp-ad-exit-0.1.js"></script>
-  <script async custom-element="amp-dynamic-css-classes" src="https://cdn.ampproject.org/v0/amp-dynamic-css-classes-0.1.js"></script>
-  <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
-  <script
-      async
-      custom-element="amp-carousel"
-      src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"
-    ></script>
-    <script
-      async
-      custom-element="amp-ad"
-      src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
-    ></script>
-  
+  <meta name="viewport" content="width=device-width">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <title>Client Side User Consent Flow</title>
+  <!-- ## Setup -->
+  <!-- Import the consent component in the header. -->
+  <script async custom-element="amp-consent" src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"></script>
+  <!-- for this example we use `amp-ad` as well as... -->
+  <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+  <!-- ... `amp-list` together with... -->
+  <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+  <!-- ... `amp-mustache`. -->
+  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
- 
-  <style amp-custom>
-      h1 {
-        color: red;
-      }
-    
-    </style>
-  
-  
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "NewsArticle",
-        "headline": "Maliek News",
-        "image": ["thumbnail1.jpg"],
-        "datePublished": "2022-02-05T08:00:00+08:00"
-      }
-    </script>
-
-
-  
-<script id="amp-access" type="application/json">
-{
-  "vendor": "scroll",
-  "namespace": "scroll"
-}
-</script>
-  
-  
-  
+  <
 </head>
 <body>
-  
-   <amp-auto-ads type="adsense" data-ad-client="ca-pub-6607653375286321"></amp-auto-ads>
-  
-   <h1 on="tap:exit-api.exit(target='landingPage')">Supplies</h1>
- 
-  
-  <amp-img src="           " layout="responsive" width="266" height="150"></amp-img> 
-  
-  
-  
-  <div class="amp-ad-container" amp-access="NOT scroll.scroll">
-    
-   <amp-ad
-     layout="fixed"
-     width="300"
-     height="300"
-     type="adsense"
-     data-ad-client="ca-pub-6607653375286321"
-     data-ad-slot="6766695733">
-   </amp-ad>
-    
-  </div>
-    
-  <amp-analytics config="http://adball.tech/config.json">
-  <script type="application/json">
-    {
-      "requests": {
-        "pageview": "https://adball.tech/analytics?url=${canonicalUrl}&title=${title}&acct=${account}&clientId=${clientId(cid-scope)}",
-      },
-      "vars": {
-        "account": "ABC123",
-        "title": "Homepage"
-      },
-      "triggers": {
-        "some-event": {
-          "on": "visible",
-          "request": "pageview",
-          "vars": {
-            "title": "My News",
-            "clientId": "My User"
-          }
-      }
-    }
-  </script>
-</amp-analytics>
-    
-    
-<amp-install-serviceworker
-  layout="nodisplay"
-  src="https://www.adball.tech/serviceworker.js"
-  data-no-service-worker-fallback-url-match=".*\.amp\.html"
-  data-no-service-worker-fallback-shell-url="https://pub.com/shell">
-</amp-install-serviceworker>
+  <!--
+  ## Basic usage
 
+  The [`amp-consent`](/content/amp-dev/documentation/components/reference/amp-consent.md) component allows to specify the required user consent for this page using the required 'consentRequired' flag. A CORS endpoints can be specified via the `checkConsentHref` attribute. The `amp-consent` component then will check via a POST request if the consent UI needs to be shown. The response should look like this:
 
+  ```json
+  {
+    "consentRequired": boolean (required),
+    "consentStateValue": enum (accepted/rejected/unknown) (optional),
+    "consentString": string (optional),
+    "expireCache": boolean (default false),
+  }
+  ```
+  It is possible, to re-trigger the consent dialog using the `myConsent.prompt()` action. One use case for this is giving users the option to change their settings after consent dialog has been dismissed. For this to work, the post consent UI needs to be specified in the `amp-consent` JSON config: `"promptUI": "consentDialog"`.
+  If `consentRequired` was set to `true` in the incline script config, then `amp-consent` will first check localstorage for an existing consent decision and use it if present. Otherwise it will show the promptUi (if configured). If `consentRequired` was set to false, `amp-consent` will immediately unblock all elements. 
+  -->
+  <amp-consent id="myUserConsent" layout="nodisplay">
+    <script type="application/json">{
+      "consentInstanceId": "consent-id",
+      "consentRequired": true,
+      "promptUI": "consentDialog",
+      "postPromptUI": "post-consent-ui"
+    }</script>
+    <div class="popupOverlay" id="consentDialog">
+      <div class="consentPopup">
+        <div class="dismiss-button" role="button" tabindex="0" on="tap:myUserConsent.dismiss">X</div>
+        <h2>Headline</h2>
+        <p>This is an important message requiring you to make a choice.</p>
+        <p>This is some more information about this choice. Here's a list of items related to this choice.</p>
+        <amp-list height="132" layout="fixed-height" src="/static/samples/json/consent-items.json" binding="no">
+          <template type="amp-mustache">
+            <li>{{.}}</li>
+          </template>
+        </amp-list>
+        <button on="tap:myUserConsent.accept">Accept</button>
+        <button on="tap:myUserConsent.reject">Reject</button>
+      </div>
+    </div>
+    <div id="post-consent-ui">
+      <button on="tap:myUserConsent.prompt()">Update Consent</button>
+    </div>
+  </amp-consent>
 
-    <amp-iframe title="Performs a live query against the AMP URL API"
-            width="auto" height="645"
-            layout="fixed-height"
-            sandbox="allow-scripts allow-same-origin allow-popups"
-            allowfullscreen
-            frameborder="0"
-            src="/static/files/api.html">
-      
-            <amp-img src="/placeholder.png"
-             layout="fixed-height"
-             height="645"
-             placeholder>
-             </amp-img>
-    </amp-iframe>
+  <!--
+    Use `data-block-on-consent` attribute to block AMP components until consent is given.
+    Individual AMP components can override  blocking behavior and implement blocking logic themselves.
 
+    Here is an image which is blocked until consent is given:
+  -->
+  <amp-img data-block-on-consent src="/static/samples/img/landscape_lake_300x201.jpg" width="300" height="201">
+  </amp-img>
 
-  
-  
-  
-  
+  <!--
+  Ads can also be blocked until consent is given, but ad networks can implement own behavior
+  (e.g. default to non-personalized ads without consent, as seen <a href="https://support.google.com/dfp_premium/answer/7678538#amp-pages" target="_blank">
+  documented here</a> for Doubleclick). Note that you may see the same ad when accepting or rejecting consent for this specific example and that's because the example doesn't use personalized information even when accepting consent.<br/>
+  Here is an example of `amp-ad` depending on `amp-consent`:
+ -->
+ <amp-ad data-block-on-consent data-slot="/30497360/a4a/a4a_native" height="250" type="doubleclick" width="300">
+  </amp-ad>
+</body></html>
    
-  <amp-install-serviceworker
-      src="https://www.adball.tech/serviceworker.js"
-      layout="nodisplay">
-</amp-install-serviceworker>
-    
-
     
     
   
